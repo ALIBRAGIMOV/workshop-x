@@ -1,4 +1,4 @@
-package workshop
+package main
 
 import (
 	"github.com/go-chi/chi/v5"
@@ -8,8 +8,8 @@ import (
 )
 
 func main()  {
-	h = handler.NewHandler()
-	r = chi.NewRouter()
+	h := handler.NewHandler()
+	r := chi.NewRouter()
 
 	r.Get("/hello", h.Hello)
 
