@@ -5,6 +5,7 @@ import (
 	"github.com/ilyakaznacheev/cleanenv"
 	"log"
 	"net/http"
+	"os"
 	"workshop/internal/config"
 	"workshop/internal/handler"
 )
@@ -24,6 +25,6 @@ func main() {
 	path := cfg.Host + ":" + cfg.Port
 
 	log.Printf("starting server at %s", path)
-	err = http.ListenAndServe(":8080", r)
+	err = http.ListenAndServe(":" + os.Getenv("PORT"), r)
 	log.Printf("shutting server down with %v", err)
 }
