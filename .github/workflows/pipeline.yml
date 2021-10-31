@@ -34,7 +34,8 @@ jobs:
         uses: codecov/codecov-action@v1.0.0
         with:
           file: ./coverage.txt
-          fail_ci_if_error: false
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: no
   deploy:
     name: Deploy on Heroku
     runs-on: ubuntu-latest
