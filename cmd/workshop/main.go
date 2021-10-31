@@ -25,7 +25,5 @@ func main() {
 
 	log.Printf("starting server at %s", path)
 	err = http.ListenAndServe(":8080", r)
-	log.Print("shutting server down")
-	log.Fatal(err)
-
+	log.Printf("shutting server down with %v", err)
 }
