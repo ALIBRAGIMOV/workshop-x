@@ -11,13 +11,6 @@ import (
 )
 
 func TestHandler_Hello(t *testing.T) {
-	type fields struct {
-		jokeClient api.Client
-	}
-	type args struct {
-		w http.ResponseWriter
-		r *http.Request
-	}
 	tests := []struct {
 		name   string
 		joke *api.JokeResponse
